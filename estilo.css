@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.game-board{
+    width: 100%;
+    height: 100vh ;
+    border: 1px solid #333;
+    border-bottom: 20px solid #979797;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeB, #E0F6FF);
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.pipe2{
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    animation: pipe2-animation 4s infinite  linear;
+}
+
+@keyframes pipe-animation{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes pipe2-animation{
+    from{
+        right: -100px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.jump{
+    animation: jump 500ms infinite ease-out
+
+}
+
+@keyframes jump{
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+.turtle{
+    position: absolute;
+    right: -160px;
+    image-orientation: flip;
+    animation:  turtle-animation infinite 2.5s linear  ;
+}
+.turtle2{
+    position: absolute;
+    right: -300px;
+    top: 500px;
+    image-orientation: flip;
+    animation:  turtle2-animation infinite 2.5s linear  ;
+}
+
+@keyframes turtle-animation {
+    from{
+        right: -100px;
+        top: 50px;
+    }
+    to{
+       
+        right: 100%;
+        top: 150px;
+    }
+}
+@keyframes turtle2-animation {
+    from{
+        right: -300px;
+        top: 600px;
+    }
+    to{
+       
+        right: 100%;
+        top: 150px;
+    }
+}
+
+.clouds{
+    width: 550px;
+    margin-top: 20px;
+    position: absolute;
+    animation: clouds-animation  infinite 8s  linear
+}
+
+@keyframes clouds-animation{
+    from{
+        right: -550px;
+        top: 10px
+    }
+    to{
+        right: 100%;
+        top: 100px
+    }
+}
+
+.game-over{
+    position: absolute;
+    /* display: flex; */
+    width: 30%;
+    left: 35vw;
+
+
+}
+
+.reset{
+    position: absolute;
+    align-content: center;
+    background-color: green;
+    top:60vh;
+    left: 42vw;
+    color: white;
+    font-size: 20px;
+    width: 300px;
+    height: 50px;
+    border-radius: 150px;
+    border: none;
+}
+
+.reset:hover{
+    background-color: rgb(30, 58, 2);
+    font-size: 30px ;
+}
+
+
+
+.invisivel{
+    display: none;
+}
